@@ -1,1 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architect Mathi | Architecture & Design</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d0d0d;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(13, 13, 13, 0.95);
+      border-bottom: 1px solid #333;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #d4a64a;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4a64a;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 120px;
+      background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.88)),
+        radial-gradient(circle at center, #333, #080808 70%);
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 90px);
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+    }
+
+    .hero h1 span {
+      color: #d4a64a;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #ccc;
+      font-size: 19px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 13px 28px;
+      background: #d4a64a;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .section-title span {
+      color: #d4a64a;
+    }
+
+    .section-title p {
+      color: #aaa;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: #171717;
+      padding: 35px;
+      border: 1px solid #2b2b2b;
+      border-radius: 8px;
+    }
+
+    .about h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #bbb;
+      margin-bottom: 15px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service-card {
+      background: #171717;
+      padding: 35px 25px;
+      border: 1px solid #2b2b2b;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: #d4a64a;
+    }
+
+    .service-number {
+      color: #d4a64a;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+
+    .service-card p {
+      color: #aaa;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .project {
+      min-height: 260px;
+      background: linear-gradient(145deg, #252525, #101010);
+      border: 1px solid #333;
+      border-radius: 8px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-7px);
+      border-color: #d4a64a;
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+    }
+
+    .project p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      background: #171717;
+      padding: 45px 25px;
+      border: 1px solid #2b2b2b;
+      border-radius: 8px;
+    }
+
+    .contact-box p {
+      color: #bbb;
+      margin: 12px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid #292929;
+      color: #888;
+    }
+
+    footer span {
+      color: #d4a64a;
+    }
+
+    @media (max-width: 800px) {
+      nav {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .about,
+      .services,
+      .projects {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">Architect <span>Mathi</span></div>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div>
+        <p>ARCHITECTURE • GRAPHIC DESIGN • VISUAL DESIGN</p>
+        <h1>Architect <span>Mathi</span></h1>
+        <p>
+          Designing spaces and visual experiences with creativity,
+          functionality and a strong architectural vision.
+        </p>
+        <a class="btn" href="#projects">View My Work</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-title">
+        <h2>About <span>Me</span></h2>
+        <p>Architecture, creativity and design.</p>
+      </div>
+
+      <div class="about">
+        <div class="about-box">
+          <h3>Architect & Designer</h3>
+          <p>
+            I am Mathi, an architect passionate about creating meaningful,
+            functional and beautiful spaces.
+          </p>
+          <p>
+            My main interest is residential architecture, while also working
+            on mixed-use buildings and visual design projects.
+          </p>
+        </div>
+
+        <div class="about-box">
+          <h3>My Approach</h3>
+          <p>
+            Every project begins with understanding the client, the site,
+            the context and the purpose of the space.
+          </p>
+          <p>
+            I believe good design should combine creativity, functionality,
+            simplicity and identity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="section-title">
+        <h2>My <span>Services</span></h2>
+        <p>Creative solutions for architecture and visual communication.</p>
+      </div>
+
+      <div class="services">
+
+        <div class="service-card">
+          <div class="service-number">01</div>
+          <h3>Architectural Design</h3>
+          <p>
+            Residential house design, floor plans, elevations,
+            architectural concepts and presentation drawings.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">02</div>
+          <h3>Mixed-Use Design</h3>
+          <p>
+            Functional mixed-use buildings that combine commercial,
+            residential and social spaces.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">03</div>
+          <h3>Graphic Design</h3>
+          <p>
+            Logos, posters, banners, event programs and other
+            professional visual materials.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">04</div>
+          <h3>Video Editing</h3>
+          <p>
+            Short promotional and social media videos for TikTok,
+            Instagram, YouTube and advertising.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">05</div>
+          <h3>3D Visualization</h3>
+          <p>
+            Architectural visualization and presentation concepts
+            that communicate design ideas clearly.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-number">06</div>
+          <h3>Presentation Design</h3>
+          <p>
+            Clean and professional architectural presentations,
+            boards and visual layouts.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-title">
+        <h2>Selected <span>Projects</span></h2>
+        <p>A selection of architectural and creative work.</p>
+      </div>
+
+      <div class="projects">
+
+        <div class="project">
+          <h3>Mixed-Use Building</h3>
+          <p>
+            Conceptual mixed-use development combining commercial,
+            office, social and residential functions.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Residential Architecture</h3>
+          <p>
+            Functional and contemporary residential design focused
+            on comfort, light and spatial quality.
+          </p>
+        </div>
+
+        <div class="project">
+          <h3>Graphic Design</h3>
+          <p>
+            Branding, posters, banners and visual communication
+            created for different clients and organizations.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="section-title">
+        <h2>Let's <span>Work Together</span></h2>
+        <p>Have a project or design idea? Let's create it together.</p>
+      </div>
+
+      <div class="contact-box">
+        <p><strong>Architect Mathi</strong></p>
+        <p>Architecture • Graphic Design • Video Editing</p>
+        <p>Available for freelance projects and collaborations.</p>
+
+        <a class="btn" href="mailto:your-email@example.com">
+          Contact Me
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 <span>Architect Mathi</span>. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
