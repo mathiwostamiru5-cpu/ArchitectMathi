@@ -1,1 +1,657 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>ARCHITECT MATHI</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; } html { scroll-behavior: smooth; } body { font-family: Arial, sans-serif; background: #f5f5f5; color: #222; line-height: 1.6; } header { position: fixed; top: 0; left: 0; width: 100%; background: #111; padding: 18px 7%; z-index: 9999; } nav { display: flex; justify-content: space-between; align-items: center; } .logo { color: white; font-size: 23px; font-weight: bold; text-decoration: none; white-space: nowrap; } .nav-links { display: flex; gap: 25px; list-style: none; } .nav-links a { color: white; text-decoration: none; font-size: 15px; cursor: pointer; transition: 0.3s; } .nav-links a:hover { color: #d6a85f; } section { min-height: 100vh; padding: 120px 8% 80px; scroll-margin-top: 80px; } #home { display: flex; align-items: center; justify-content: center; text-align: center; background: #1b1b1b; color: white; } #home h1 { font-size: 55px; margin-bottom: 15px; letter-spacing: 2px; } #home p { font-size: 20px; color: #ddd; } .btn { display: inline-block; margin-top: 25px; padding: 13px 30px; background: #d6a85f; color: #111; text-decoration: none; border-radius: 5px; font-weight: bold; } .section-title { text-align: center; font-size: 38px; margin-bottom: 40px; } #about { background: white; } .about-content { max-width: 900px; margin: auto; text-align: center; font-size: 18px; } #services { background: #eeeeee; } .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; max-width: 1100px; margin: auto; } .card { background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 20px rgba(0,0,0,0.08); } .card h3 { margin-bottom: 15px; } #projects { background: white; } .project-box { max-width: 1000px; margin: auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; } .project { padding: 30px; background: #f2f2f2; border-radius: 10px; } #contact { background: #1b1b1b; color: white; text-align: center; } .contact-info { font-size: 19px; margin-top: 20px; } .contact-info a { color: #d6a85f; text-decoration: none; } footer { background: #000; color: white; text-align: center; padding: 20px; } @media (max-width: 768px) { header { padding: 15px 4%; } nav { flex-direction: column; gap: 12px; } .nav-links { gap: 12px; flex-wrap: wrap; justify-content: center; } .nav-links a { font-size: 13px; } section { padding-top: 150px; } #home h1 { font-size: 38px; } .cards { grid-template-columns: 1fr; } .project-box { grid-template-columns: 1fr; } } </style> </head> <body> <!-- NAVIGATION --> <header> <nav> <a href="#home" class="logo">ARCHITECT MATHI</a> <ul class="nav-links"> <li><a href="#home">Home</a></li> <li><a href="#about">About Me</a></li> <li><a href="#services">Services</a></li> <li><a href="#projects">Projects</a></li> <li><a href="#contact">Contact Me</a></li> </ul> </nav> </header> <!-- HOME --> <section id="home"> <div> <h1>ARCHITECT MATHI</h1> <p> Architecture • Graphic Design • Video Editing </p> <a href="#projects" class="btn"> View My Projects </a> </div> </section> <!-- ABOUT ME --> <section id="about"> <h2 class="section-title"> About Me </h2> <div class="about-content"> <p> I am Mathi, an architect passionate about creating beautiful, functional and modern spaces. </p> <br> <p> My main interest is residential house design. I also work on mixed-use buildings, graphic design and video editing. </p> </div> </section> <!-- SERVICES --> <section id="services"> <h2 class="section-title"> Services </h2> <div class="cards"> <div class="card"> <h3>Architecture</h3> <p> Residential house design, architectural planning, 3D concepts and building design. </p> </div> <div class="card"> <h3>Graphic Design</h3> <p> Logo design, posters, banners, event programs and professional visual designs. </p> </div> <div class="card"> <h3>Video Editing</h3> <p> Advertising videos and short videos for TikTok, Instagram and YouTube. </p> </div> </div> </section> <!-- PROJECTS --> <section id="projects"> <h2 class="section-title"> Projects </h2> <div class="project-box"> <div class="project"> <h3>Residential Design</h3> <p> Modern residential house design and architectural planning projects. </p> </div> <div class="project"> <h3>Mixed-Use Building</h3> <p> Commercial, office and residential mixed-use architectural projects. </p> </div> <div class="project"> <h3>Graphic Design</h3> <p> Logos, posters, banners and promotional graphic designs. </p> </div> <div class="project"> <h3>Video Editing</h3> <p> Short promotional and social media video projects. </p> </div> </div> </section> <!-- CONTACT ME --> <section id="contact"> <h2 class="section-title"> Contact Me </h2> <div class="contact-info"> <p> Let's work together on your next project. </p> <br> <p> 📧 <a href="mailto:mathiwostamiru5@gmail.com"> mathiwostamiru5@gmail.com </a> </p> <p> 📞 <a href="tel:+251904701405"> +251 904 701 405 </a> </p> <p> 📞 <a href="tel:+251946137820"> +251 946 137 820 </a> </p> </div> </section> <!-- FOOTER --> <footer> <p> © 2026 ARCHITECT MATHI. All Rights Reserved. </p> </footer> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ARCHITECT MATHI</title>
+
+<style>
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER / NAVIGATION
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 18px 7%;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ARCHITECT MATHI */
+
+.logo {
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: #d6a85f;
+}
+
+
+/* MENU */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d6a85f;
+}
+
+
+/* =========================
+   ALL SECTIONS
+========================= */
+
+section {
+    min-height: 100vh;
+    padding: 120px 8% 80px;
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: #1b1b1b;
+    color: white;
+}
+
+#home h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+#home p {
+    font-size: 20px;
+    color: #ddd;
+}
+
+
+/* PROJECT BUTTON */
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 30px;
+
+    background: #d6a85f;
+    color: #111;
+
+    text-decoration: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    background: white;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: auto;
+
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    background: #eeeeee;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1100px;
+    margin: auto;
+}
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+#projects {
+    background: white;
+}
+
+.project-box {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.project {
+    padding: 30px;
+
+    background: #f2f2f2;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    background: #1b1b1b;
+    color: white;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.contact-info a {
+    color: #d6a85f;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-info a:hover {
+    color: white;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #000;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 4%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    section {
+        padding-top: 150px;
+    }
+
+    #home h1 {
+        font-size: 38px;
+    }
+
+    #home p {
+        font-size: 17px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .project-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+<nav>
+
+<a href="#home" class="logo">
+ARCHITECT MATHI
+</a>
+
+<ul class="nav-links">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About Me</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#projects">Projects</a>
+</li>
+
+<li>
+<a href="#contact">Contact Me</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section id="home">
+
+<div>
+
+<h1>
+ARCHITECT MATHI
+</h1>
+
+<p>
+Architecture • Graphic Design • Video Editing
+</p>
+
+<a href="#projects" class="btn">
+View My Projects
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT ME
+========================= -->
+
+<section id="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about-content">
+
+<p>
+I am Mathi, an architect passionate about creating beautiful,
+functional and modern spaces.
+</p>
+
+<br>
+
+<p>
+My main interest is residential house design.
+I also work on mixed-use buildings, graphic design and video editing.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+<h2 class="section-title">
+Services
+</h2>
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Architecture
+</h3>
+
+<p>
+Residential house design, architectural planning,
+3D concepts and building design.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Graphic Design
+</h3>
+
+<p>
+Logo design, posters, banners, event programs
+and professional visual designs.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>
+Video Editing
+</h3>
+
+<p>
+Advertising videos and short videos for TikTok,
+Instagram and YouTube.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+<h2 class="section-title">
+Projects
+</h2>
+
+<div class="project-box">
+
+
+<div class="project">
+
+<h3>
+Residential Design
+</h3>
+
+<p>
+Modern residential house design and architectural
+planning projects.
+</p>
+
+</div>
+
+
+
+<div class="project">
+
+<h3>
+Mixed-Use Building
+</h3>
+
+<p>
+Commercial, office and residential mixed-use
+architectural projects.
+</p>
+
+</div>
+
+
+
+<div class="project">
+
+<h3>
+Graphic Design
+</h3>
+
+<p>
+Logos, posters, banners and promotional
+graphic designs.
+</p>
+
+</div>
+
+
+
+<div class="project">
+
+<h3>
+Video Editing
+</h3>
+
+<p>
+Short promotional and social media
+video projects.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT ME
+========================= -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+<div class="contact-info">
+
+<p>
+Let's work together on your next project.
+</p>
+
+<br>
+
+<p>
+📧
+<a href="mailto:mathiwostamiru5@gmail.com">
+mathiwostamiru5@gmail.com
+</a>
+</p>
+
+<p>
+📞
+<a href="tel:+251904701405">
++251 904 701 405
+</a>
+</p>
+
+<p>
+📞
+<a href="tel:+251946137820">
++251 946 137 820
+</a>
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<p>
+© 2026 ARCHITECT MATHI. All Rights Reserved.
+</p>
+
+</footer>
+
+
+</body>
+</html>
